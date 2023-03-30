@@ -8,7 +8,7 @@ class Gitops < Formula
 
   def install
     ENV["GOPATH"] = buildpath
-    path = buildpath/"src/github.com/mxcd/gitops-cli"
+    path = buildpath/"cmd/gitops"
     cd path do
       system "go", "build", "-o", "#{bin}/gitops"
     end
