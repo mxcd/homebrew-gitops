@@ -1,8 +1,8 @@
 class Gitops < Formula
   desc "CLI tool for performing gitops tasks"
   homepage "https://github.com/mxcd/gitops-cli"
-  url "https://github.com/mxcd/gitops-cli/archive/2.0.0-beta-2.tar.gz"
-  sha256 "a99bfc6769eb6e94ed9fb1fe4223f4567e896f85c836c34ce37d5b9eb49704ca"
+  url "https://github.com/mxcd/gitops-cli/archive/2.0.0-beta-1.tar.gz"
+  sha256 "ee61955cdde7dbdfd049b06e4b4afb8a57e3ecff5f162cc45631c2a4e50dda04"
   license "MIT"
   depends_on "go" => :build
 
