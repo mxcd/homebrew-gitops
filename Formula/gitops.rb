@@ -7,7 +7,7 @@ class Gitops < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
+    # ENV["GOPATH"] = buildpath
     path = buildpath/"cmd/gitops"
     cd path do
       system "go", "build", "-o", "#{bin}/gitops"
