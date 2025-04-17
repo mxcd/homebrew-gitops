@@ -7,10 +7,9 @@ class Gitops < Formula
   depends_on "go" => :build
 
   def install
-    # ENV["GOPATH"] = buildpath
-    path = buildpath/"cmd/gitops"
-    cd path do
-      system "go", "build", "-ldflags=\"-s -w -X 'main.version=2.2.3'\"", "-o", "#{bin}/gitops"
+    ldflags = "-s -w -X main.version=#{version}"
+    cd "cmd/gitops" do
+      system "go", "build", *std_go_args(ldflags: ldflags)
     end
   end
 
